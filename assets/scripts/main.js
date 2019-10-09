@@ -22,7 +22,7 @@ myXml.onload = function(e) {
     makeList(dataAry);
   }
 }
-myXml.open("GET", "/assets/scripts/data.json", true);
+myXml.open("GET", "/assets/data/data.json", true);
 myXml.send(null);
 
 function makeList(dataAry) {
