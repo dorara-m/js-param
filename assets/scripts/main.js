@@ -12,7 +12,7 @@ myXml.onload = function(e) {
   console.log("complete"); //通信完了時
   var data = JSON.parse(this.response);
   var dataAry = [];
-  for (let key of Object.keys(data)) {
+  for (let key of Object.keys(data)) {//ここがIEだめかも, babelでうまいこと変換できたら
     dataAry.push(data[key]);
   }//json->配列に整形
   var urlParam = location.search.substring(1);
