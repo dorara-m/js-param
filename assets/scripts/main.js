@@ -28,11 +28,10 @@ myXml.send(null);
 function makeList(dataAry) {
   var html = "<ul>";
   for (var i = 0; i < dataAry.length; i++) {
-    html += "<li>";
+    html += '<li><a href="/?newsID=' + i + '">';
     html += "<p>" + dataAry[i].date + "</p>";
     html += "<h3>" + dataAry[i].name + "</h3>";
-    html += '<p><a href="/?newsID='+ i +'">詳細 →</a></p>';
-    html += "</li>";
+    html += "</a></li>";
   }
   html += "</ul>";
 
@@ -53,8 +52,15 @@ function switchPage(urlParam, data) {
     var html = '<div class="page">'
     html += '<h1>' + pageData.name + '</h1>'
     html += '<p>' + pageData.date + '</p>'
+    if (pageData.h2) {
+      html += '<h2>' + pageData.h2 + '</h2>'
+    }
     html += '<p>' + pageData.text + '</p>'
-    html += '<p><a href="/">← 一覧に戻る</p>'
+    if (pageData.h2_2) {
+      html += '<h2>' + pageData.h2_2 + '</h2>'
+      html += '<p>' + pageData.text2 + '</p>'
+    }
+    html += '<p><a href="/">← お知らせ一覧に戻る</p>'
     html += '</div>'
     var target = document.getElementById("text");
     target.innerHTML = html;

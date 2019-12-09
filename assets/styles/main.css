@@ -1,0 +1,21 @@
+.c-list li {
+  list-style: none;
+}
+
+.c-list li a {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #bbb;
+}
+
+.c-list li a h3 {
+  margin-left: 20px;
+}
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+}
